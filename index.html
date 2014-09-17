@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+       
+ <script type="text/javascript">
+            
+var theData = [ 1, 2, 3 ]
+
+var p = d3.select("body").selectAll("p")
+  .data(theData)
+  .enter()
+  .append("p")
+  .text("hello world");
+circleRadii = [40, 20, 10]
+ var svgContainer = d3.select("body").append("svg")
+                                    .attr("width", 600)
+                                     .attr("height", 100);
+ var circles = svgContainer.selectAll("circle")
+                          .data(circleRadii)
+                          .enter()
+                          .append("circle")
+var circleAttributes = circles
+                       .attr("cx", 200)
+                       .attr("cy", 60)
+                       .attr("r", function (d) { return d; })
+                      .style("fill", "navy");
+
+
+
+        </script>
+    </body>
+</html> 
